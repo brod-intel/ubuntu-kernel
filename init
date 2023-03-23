@@ -7,6 +7,6 @@ if [ "${REBOOT}" == "true" ]; then
   reboot="&& reboot"
 fi
 
-LANG=C.UTF-8 chroot /target/root sh -c "
+LANG=C.UTF-8 chroot /host/ sh -c "
   apt update && \
   apt install ${kernel_image} ${reboot}"

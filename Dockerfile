@@ -7,6 +7,7 @@ LABEL maintainer "Bryan J Rodriguez <bryan.j.rodriguez@intel.com>"
 RUN apk update && apk add --no-cache \
     bash
 
+
 COPY init /init
 
 ENTRYPOINT [ "bash", "-c" ]
