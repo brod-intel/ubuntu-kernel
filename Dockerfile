@@ -8,7 +8,7 @@ RUN apk update && apk add --no-cache \
     bash
 
 
-COPY init /init
+COPY init.sh /usr/local/bin/init.sh
 
-ENTRYPOINT [ "bash", "-c" ]
-CMD [ "/init" ]
+ENTRYPOINT [ "/bin/bash", "-c" ]
+CMD [ "/usr/local/bin/init.sh" ]
